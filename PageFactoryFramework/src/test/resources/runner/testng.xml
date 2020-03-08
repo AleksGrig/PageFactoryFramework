@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Page Factory Model">
+
+	<listeners>
+		<listener
+			class-name="com.automation.listeners.CustomListeners" />
+		<listener
+			class-name="com.automation.errorcollectors.TestListenerAdapter" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener
+			class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<!-- <listener class-name="com.automation.listeners.CustomListeners" /> -->
+	</listeners>
+
+	<test thread-count="5" name="Login Test">
+		<classes>
+			<class name="com.automation.testcases.LoginTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Search Test">
+		<classes>
+			<class name="com.automation.testcases.SearchTest" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="Top Navigation Test">
+		<classes>
+			<class name="com.automation.testcases.TopNavigationTest" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
